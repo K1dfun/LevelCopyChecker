@@ -1,47 +1,64 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background: linear-gradient(135deg, #0f0f0f, #1e1e1e);
   margin: 0;
   padding: 0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  backdrop-filter: blur(10px);
 }
 
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #ccc;
 }
 
 button {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 12px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.8);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  width: 100%;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgba(0, 123, 255, 1);
 }
 
 #results {
@@ -50,6 +67,31 @@ button:hover {
 }
 
 .result-item {
-  padding: 5px 0;
-  border-bottom: 1px solid #eee;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+.result-item a {
+  color: #66b3ff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  button,
+  input[type="text"] {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
